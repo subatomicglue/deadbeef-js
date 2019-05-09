@@ -1,6 +1,6 @@
 
 # deadbeef - fancypants webpage renderer
-behold, my 2006 [php project](../deadbeef-php), ported to javascript (in 2019)
+behold, my 2006 [php project](../../deadbeef-php), ported to javascript (in 2019)
 
 <h1> 0xdeadbeef</h1>
 <p> dead beef is a fancy ascii rendering utility.  it will place
