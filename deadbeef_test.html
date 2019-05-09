@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+    <script src="deadbeef.js"></script>
+    <script>
+      function render() {
+        let db = new deadbeef();
+        let page_text = ` 
+<c><b>centered</b></c> 
+
+<r>right    </r> 
+some text 
+some text      is good to have
+some <b>bold</b> text is nice to read 
+<l pos=32>left indented 32</l>
+<l pos=28>left indented 28</l>
+<a href="dead link">dead link</a> - some dead link that doesn't work
+
+<l pos=4>left indented 4</l>
+
+`;
+
+        db.linkcolor = "#0090ff";
+        db.alinkcolor = "#0090ff";
+        db.vlinkcolor = "#0090ff";
+        db.textcolor = "#ffffff";
+        db.bgcolor = "#010101";
+        db.tonemap = [ [60,20,0], [100,100,0], [150,0,150], [20, 60, 60] ];
+
+        function html2elts( html ) {
+          let e = document.createElement('div');
+          e.innerHTML = html;
+          return e.childNodes;
+        }
+
+        let html = `${db.DrawPage( page_text, 6, 80, 15 )}`;
+        for (let n of html2elts( html ))
+          body.appendChild( n );
+      }
+    </script>
+    <style>
+      body {
+        color: #ffffff;
+        background-color: #000000;
+      }
+    </style>
+  </head>
+  <body id='body' onload='render()'>
+  </body>
+</html>
