@@ -38,7 +38,7 @@ some <b>bold</b> text is nice to read
 let html = db.DrawPage( page_text, 6, 80, 15 )
 ```
 
-[see here]() for a working example
+[see here](deadbeef_test.html) for a working example
 
 
 <h2>License</h2>
